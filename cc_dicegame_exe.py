@@ -24,13 +24,20 @@ def leave_game():
 
 root = tk.Tk()
 root.title("Dice Game")
-roll_button = tk.Button(root, text="Roll Dice", command=dice_game)
+root.geometry("300x200")  # sets window size
+root.configure(bg="black")  # sets background color to black
+
+
+roll_button = tk.Button(root, text="Roll Dice",
+                        command=dice_game, fg="green", bg="black")
 roll_button.pack()
 
-leave_button = tk.Button(root, text="Leave Game", command=leave_game)
+leave_button = tk.Button(root, text="Leave Game",
+                         command=leave_game, fg="green", bg="black")
 leave_button.pack()
 
-message_label = tk.Label(root, text="Welcome to the Dice Game!")
+message_label = tk.Label(
+    root, text="Welcome to the Dice Game!", fg="green", bg="black")  # sets text green and bg black
 message_label.pack()
 
 root.mainloop()
